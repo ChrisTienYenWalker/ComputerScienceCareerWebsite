@@ -1,0 +1,50 @@
+.header nav{
+    float: none;
+    display: inline;
+    left: 26vw;
+    background-color: white;
+    position: sticky;
+}
+
+.header h3{
+    text-align: center;
+    font-size: 4vmin;
+    display: inline;
+    margin-left: 2em;
+    font-weight: 100;
+
+}
+.header a:hover{
+    text-decoration: underline;
+    color: #3377cc;
+    font-size: 5vmin;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer img{
+    height: 15vmin;
+    width: 15.3vmin;
+    margin-left: .3em;
+    border-radius: 10%;
+    bottom: 0.2vh;
+}
+
+.footer nav{
+    float: auto;
+    right: 45vw;
+    bottom: 0.2vh;
+    position: absolute;
+    
+}
+
+.footer img:hover{
+    transform: scale(1.15);
+}
+.footer{
+    width:100%;
+}
+
