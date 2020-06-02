@@ -7,10 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Header></Header>
-       <hr></hr>
+       {/* <Header></Header> */}
       <Body></Body>
-       <hr></hr>
        {/* <Footer></Footer> */}
       </header>
     </div>

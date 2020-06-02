@@ -1,24 +1,134 @@
-.body p{
-    font-size: 3vmin;
-    margin-right: 10%;
-    margin-left: 10%;
+.all {
+    background-color: #f00;
+    font-family: 'Amatic SC';
+    margin-bottom: 0;
 }
 
-.body h2{
-    margin-left: 13%;
+.refelction p{
     font-size: 4vmin;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: white;
+}
+
+.refelction img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vmin;
+    width: 80vmin
+}
+
+.refelction h3{
+    text-align: center;
+    font-size: 5.6vmin;
+    color: white;
+}
+.imagewaterloo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bodymod h2{
+    text-align: center;
+    font-size: 6vmin;
+    color: white;
+}
+
+.bodymod img{
+    float: right;
+    height: 40vmin;
+    width: 70vmin
+}
+
+.bodymod p{
+    font-size: 4vmin;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: white;
+}
+.outcome img{
+height: 40vmin;
+width: 70vmin;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.outcome h3{
+    text-align: center;
+font-size: 3.6vmin;
+color: white;
+
+}
+
+.outcome p{
+    font-size: 4vmin;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: white;
+}
+.body p{
+    font-size: 4vmin;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: white;
+}
+
+.body img{
+    height: 40vmin;
+    width: 70vmin;
+    margin-left: 29vw;
+    margin-bottom: 5vw;
+}
+.body h2{
+    text-align: center;
+    font-size: 6vmin;
+    color: white;
+
 }
 
 .body h3{
-    margin-left: 50%;
+    text-align: center;
     font-size: 3.6vmin;
+    color: white;
+
+}
+
+.title{
+    background-color: #120238;
+    padding-left: 32vw;
+    padding-top: 20vh;
+    height: 100vh;
+}
+
+.title h1{
+    color: white;
+    padding-top: 15vh;
+    font-size: 10vmin;
+}
+
+.title div{
+    background: #f00;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+    
+}
+
+.upperBody{
+    background-color: #f00;
 }
 
 .togglesT h2{
     text-align: center;
     font-size: 3.5vmin;
     display: inline;
-    margin-left: 10em;
+    margin-left: 8em;
     font-weight: 100;
 
 }
@@ -26,7 +136,7 @@
 .togglesT nav{
     float: none;
     display: inline;
-    left: 26vw;
+    left: 20vw;
     background-color: white;
     position: sticky;
 }
@@ -49,11 +159,20 @@
     font-size: 4vmin;
 }
 
+.link{
+    color: white;
+}
+
+.link :hover{
+    color: black;
+    transform: scale(1.1);
+}
+
 .toggles h2{
     text-align: center;
     font-size: 3.5vmin;
     display: inline;
-    margin-left: 10em;
+    margin-left: 14em;
     font-weight: 100;
 
 

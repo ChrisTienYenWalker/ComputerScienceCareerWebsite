@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
-
+import money from './images/money.png'
+import jobs from './images/jobs.png';
+import before from './images/before.png'
 class About extends React.Component {
     constructor() {
         super();
@@ -25,43 +27,6 @@ class About extends React.Component {
         }
     }
 
-    backendClick = () => {
-        if (this.state.title == "Back-End") {
-            this.setState({
-                title: "",
-                text: "",
-                frontendColour: 'white',
-                backendColour: 'white'
-            })
-        }
-
-        else {
-            this.setState({
-                title: "Back-End",
-                text: <div>
-                    <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The front end is what the user sees and directly interacts with. It is made with
-                    <br></br><br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-HTML
-                    <br></br><br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- CSS
-                    <br></br><br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Javascript
-                    <br></br><br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[5]}
-                        <br></br><br></br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {this.state.words[6]}
-                        <br></br><br></br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[7]}
-                    </p>
-                </div>,
-
-                frontendColour: 'white',
-                backendColour: 'black'
-            });
-        }
-    }
-
     frontendClick = () => {
         if (this.state.title == "Front-End") {
             this.setState({
@@ -75,11 +40,50 @@ class About extends React.Component {
         else {
             this.setState({
                 title: "Front-End",
+                text: <div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The front end is what the user sees and directly interacts with. It is made with
+                    <br></br><br></br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-HTML
+                    <br></br><br></br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- CSS
+                    <br></br><br></br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Javascript
+                    <br></br><br></br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[5]}
+                        <br></br><br></br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {this.state.words[6]}
+                        <br></br>
+                        <img src={before}></img>
+                        <br></br><br></br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[7]}
+                    </p>
+                </div>,
+
+                frontendColour: 'white',
+                backendColour: 'black'
+            });
+        }
+    }
+
+    backendClick = () => {
+        if (this.state.title == "Back-End") {
+            this.setState({
+                title: "",
+                text: "",
+                frontendColour: 'white',
+                backendColour: 'white'
+            })
+        }
+
+        else {
+            this.setState({
+                title: "Back-End",
                 text:
                     <div>
                         <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[8]}
-
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[8]}
+                            <br></br><br></br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The key role of the back end developer is to make sure that the data requested by the front end and then create the back end. The back end consists of:
 
                     <br></br><br></br>
@@ -107,35 +111,43 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <div class="body">
-                    <div>
-                        <h2>What is a Full-Stack developer?</h2>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[0]}</p>
+                <div >
+                    <div class="upperBody">
+                        <div class="bodymod">
+                            <h2 >What is a Full-Stack developer?</h2>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://prod-discovery.edx-cdn.org/media/course/image/d64fa565-a848-4f82-8c07-f2a2d98c3e4e-1cf577279324.small.jpeg"></img> {this.state.words[0]}</p>
+
+                        </div>
+                        <div class="body">
+
+                            <h2>Salary</h2>
+                            <div>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[2]}</p>
+                                <img src={money}></img>
+                            </div>
+
+                            <br></br>
+
+                            <h2>Conditions</h2>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[3]}</p>
+
+                            <h2>Outlook</h2>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[4]}</p>
+                        </div>
                     </div>
                     <div>
-                        <h2>Salary</h2>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[2]}</p>
+                        <nav class="toggles">
+                            <h2><button style={{ color: this.state.frontendColour }} onClick={this.frontendClick}>Front-End</button></h2>
+                            <h2><button style={{ color: this.state.backendColour }} onClick={this.backendClick}>Back-End</button></h2>
+                        </nav>
 
-                        <h2>Conditions</h2>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[3]}</p>
+                        <div class="outcome">
+                            <h3>{this.state.title}</h3>
+                            <p>{this.state.text}</p>
+                        </div>
 
-                        <h2>Outlook</h2>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[4]}</p>
                     </div>
                 </div>
-                <div>
-                    <nav class="toggles">
-                        <h2><button style={{ color: this.state.frontendColour }} onClick={this.frontendClick}>Front-End</button></h2>
-                        <h2><button style={{ color: this.state.backendColour }} onClick={this.backendClick}>Back-End</button></h2>
-                    </nav>
-
-                    <div class="body">
-                        <h3>{this.state.title}</h3>
-                        <p>{this.state.text}</p>
-                    </div>
-
-                </div>
-
             </div>
         );
     }
@@ -198,7 +210,7 @@ class Schools extends React.Component {
                     {this.state.words[2]}
              You can check them out with the link below:
              <br></br>
-                    <a href="https://www.lighthouselabs.ca/web-bootcamp">lighthouseLabsBootcampLink</a>.
+                    <a class="link" href="https://www.lighthouselabs.ca/web-bootcamp">lighthouseLabsBootcampLink</a>.
          </p>,
                 universityColour: 'white',
                 CollegeColour: 'white',
@@ -234,17 +246,17 @@ class Schools extends React.Component {
                 <div class="body">
                     <h2>Education</h2>
                     <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[0]}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.words[0]}
                     </p>
                 </div>
 
                 <div>
                     <nav class="togglesT">
-                            <h2><button style={{ color: this.state.CollegeColour }} onClick={this.collegeClick}>College</button></h2>
-                            <h2><button style={{ color: this.state.BootCampColour }} onClick={this.bootCampClick}>BootCamp</button></h2>
-                            <h2><button style={{ color: this.state.universityColour }} onClick={this.universityClick}>University</button></h2>
+                        <h2><button style={{ color: this.state.CollegeColour }} onClick={this.collegeClick}>College</button></h2>
+                        <h2><button style={{ color: this.state.BootCampColour }} onClick={this.bootCampClick}>BootCamp</button></h2>
+                        <h2><button style={{ color: this.state.universityColour }} onClick={this.universityClick}>University</button></h2>
                     </nav>
-                    <div class="body">
+                    <div class="outcome">
                         <h3>{this.state.title}</h3>
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.text}</p>
                     </div>
@@ -254,6 +266,8 @@ class Schools extends React.Component {
                 <div>
                     <div class="body">
                         <h2 >Waterloo</h2>
+                        <br></br>
+                        <img src="https://uwaterloo.ca/support/sites/ca.support/files/styles/sidebar-220px-wide/public/uploads/images/c007222_main_entrance-1024x768.jpg?itok=6IJBAtoM"></img>
                         <p>{this.state.words[4]}<br></br><a target="blank" href="https://uwaterloo.ca/future-students/programs/computer-science">Waterloo's Computer Science Program</a></p>
                     </div>
                 </div>
@@ -265,20 +279,46 @@ class Schools extends React.Component {
 class MyPerspective extends React.Component {
     render() {
         return (
-            <div>
-                <h3></h3>
-                <p></p>
+            <div class="refelction">
+                <div>
+                    <h3>Tech Sectors</h3>
+                    <p>There are many types of programming careers other than web development, as you can see on the image beside. The reason why web development is so great is because of the ability to let people directly see what you have made. When you make a website that works and looks nice people notice - they are glad that the search menu works. </p>
+                    <img src={jobs}></img>
+                </div>
+                <div>
+                <br></br>                    <br></br>
+
+                    <h3>The future of tech</h3>
+                    <p>
+                        <br></br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I believe that tech gives everyone a chance to create something spectacular. Tech impact on the world is crazy.
+                    <br></br>                    <br></br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As a high school student, I see technology everywhere. From classrooms to the economy, it is around us and now binds the modern times. School brings an inspecting view on technology l, a negative one. The economy is heavily impacted by technology. Companies like Kinaxis allow other sectors to view their future supply chains which means that tech does not only have an impact on its own economy. As technology rules the modern day we see major tech giants gaining too much power. During the last American election, Donald Trump used Twitter to get attention. Yes, the tech industry has a huge impact on the economy but also in other sectors. Last year Doug Ford said that he was going to ban phones in classrooms. Where I go to school this had no impact. This lets kids continue to ignore classes through technology. Though not all students use their phones these ways some use them to benefit themselves. My friend Sasha uses his phone during class but uses it to take pictures of information and learn more on the topic so that he has a better understanding. I believe technology allows people to grow and become better but it is up to the student to take the stride.
+                        <br></br>                    <br></br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I believe that technology in the future will be positive. During the past ten years we have made major discoveries and innovations in technology. My theory on the future of computers is that we will continue with the same things. Even though we have made all of these discoveries, they are all very similar. Today we pretty much all have smartphones, not flip phones and the same can be said about computers. Computers are either laptops or desktops, people seem to be moving towards laptops unless they are doing major tasks, in an office or gamers. I believe desktops will stay the same and only the parts will change, and that laptops will continue to get thin, better resolution and better specs while increasing the price too much. Maybe far into the future we will even have holographic laptops.
+                        <br></br><br></br>
+                    </p>
+                </div>
             </div>
         )
     }
 }
 function Body() {
     return (
-        <div>
-            <h1></h1>
+        <div class="all">
+            <div class="title">
+                <div class="w3-container w3-center w3-animate-fading">
+                    <h1 >Full Stack Developer</h1>
+                </div>
+
+            </div>
+
             <About></About>
+            <br></br><br></br>
             <Schools></Schools>
-            {/* <MyPerspective></MyPerspective> */}
+            <MyPerspective></MyPerspective>
         </div>
     );
 };
