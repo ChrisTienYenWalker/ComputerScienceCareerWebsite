@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ComputerScienceCareerWebsite/precache-manifest.efe1965ae7f9b1c03047349d6adda6ab.js"
+  "/ComputerScienceCareerWebsite/precache-manifest.321d2fdbab0dca7c4dfa08abf79772f6.js"
 );
 
 self.addEventListener('message', (event) => {
