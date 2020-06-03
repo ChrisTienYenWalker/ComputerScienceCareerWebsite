@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ComputerScienceCareerWebsite/static/css/main.ed82d202.chunk.css",
+    "main.js": "/ComputerScienceCareerWebsite/static/js/main.ac44355f.chunk.js",
+    "main.js.map": "/ComputerScienceCareerWebsite/static/js/main.ac44355f.chunk.js.map",
+    "runtime-main.js": "/ComputerScienceCareerWebsite/static/js/runtime-main.f646d056.js",
+    "runtime-main.js.map": "/ComputerScienceCareerWebsite/static/js/runtime-main.f646d056.js.map",
+    "static/js/2.f94df812.chunk.js": "/ComputerScienceCareerWebsite/static/js/2.f94df812.chunk.js",
+    "static/js/2.f94df812.chunk.js.map": "/ComputerScienceCareerWebsite/static/js/2.f94df812.chunk.js.map",
+    "index.html": "/ComputerScienceCareerWebsite/index.html",
+    "precache-manifest.efe1965ae7f9b1c03047349d6adda6ab.js": "/ComputerScienceCareerWebsite/precache-manifest.efe1965ae7f9b1c03047349d6adda6ab.js",
+    "service-worker.js": "/ComputerScienceCareerWebsite/service-worker.js",
+    "static/css/main.ed82d202.chunk.css.map": "/ComputerScienceCareerWebsite/static/css/main.ed82d202.chunk.css.map",
+    "static/js/2.f94df812.chunk.js.LICENSE.txt": "/ComputerScienceCareerWebsite/static/js/2.f94df812.chunk.js.LICENSE.txt",
+    "static/media/before.png": "/ComputerScienceCareerWebsite/static/media/before.e7f6e959.png",
+    "static/media/jobs.png": "/ComputerScienceCareerWebsite/static/media/jobs.54e79536.png",
+    "static/media/money.png": "/ComputerScienceCareerWebsite/static/media/money.2cef8494.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f646d056.js",
+    "static/js/2.f94df812.chunk.js",
+    "static/css/main.ed82d202.chunk.css",
+    "static/js/main.ac44355f.chunk.js"
+  ]
+}
